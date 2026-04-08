@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Garagem</title>
+</head>
+<body>
+  <h1>🚗 Garagem</h1>
+  <ul id="list"></ul>
+
+  <script type="module">
+    import axios from 'https://cdn.jsdelivr.net/npm/axios/+esm'
+
+    const res = await axios.get('http://127.0.0.1:8000/api/veiculos/')
+    const list = document.getElementById('list')
+
+    res.data.forEach(v => {
+      const li = document.createElement('li')
+      li.textContent = v.modelo + " - " + v.ano + " - R$ " + v.preco
+      list.appendChild(li)
+    })
+  </script>
+</body>
+</html>
