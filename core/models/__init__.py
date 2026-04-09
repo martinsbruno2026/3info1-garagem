@@ -1,6 +1,6 @@
 from .user import User
 from .veiculo import Veiculo
-from .modelo import Modelo
+from .models import Modelo
 from .acessorio import Acessorio
 from .cor import Cor
 

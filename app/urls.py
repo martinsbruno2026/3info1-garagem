@@ -1,3 +1,9 @@
+from core.views import (
+    AcessorioViewSet, 
+    CorViewSet, 
+    ModeloViewSet, 
+    VeiculoViewSet,
+)
 from django.contrib import admin
 from django.urls import include, path
 from drf_spectacular.views import (
@@ -13,6 +19,7 @@ from rest_framework_simplejwt.views import (
 )
 
 from core.views import UserRegistrationView, UserViewSet
+, UserLoginView
 
 router = DefaultRouter()
 
@@ -41,3 +48,8 @@ urlpatterns = [
     # API
     path('api/', include(router.urls)),
 ]
+
+router.register(r'acessorios', AcessorioViewSet, basename='acessorios')
+router.register(r'cores', CorViewSet, basename='cores')
+router.register(r'modelos', ModeloViewSet, basename='modelos')
+router.register(r'veiculos', VeiculoViewSet, basename='veiculos')
