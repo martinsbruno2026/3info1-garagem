@@ -1,5 +1,7 @@
 {
-  "python.analysis.extraPaths": ["${workspaceFolder}/__pypackages__/3.13/lib"],
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/__pypackages__/3.13/lib"
+  ],
   "python.autoComplete.extraPaths": [
     "${workspaceFolder}/__pypackages__/3.13/lib"
   ],
@@ -26,5 +28,12 @@
   "peacock.color": "#007fff",
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
-  }
+  },
+  "python-envs.pythonProjects": [
+    {
+      "path": "core/views.py",
+      "envManager": "ms-python.python:venv",
+      "packageManager": "ms-python.python:pip"
+    }
+  ]
 }
