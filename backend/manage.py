@@ -1,0 +1,1 @@
+print('Use django-admin to run server')

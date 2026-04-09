@@ -1,13 +1,7 @@
+
 from rest_framework import viewsets
-
-from .models import Acessorio, Cor, Modelo, Veiculo
-from .serializers import (
-    AcessorioSerializer,
-    CorSerializer,
-    ModeloSerializer,
-    VeiculoSerializer,
-)
-
+from .models import *
+from .serializers import *
 
 class AcessorioViewSet(viewsets.ModelViewSet):
     queryset = Acessorio.objects.all()
